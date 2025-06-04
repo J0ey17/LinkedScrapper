@@ -24,10 +24,10 @@ pattern = r"jobPosting:(\d+)"
 ### Varaibles and API Key
 designation = r"Penetration%2bTester"
 GemAPI_Key = r'GEMINI_API'
-
+dur_seconds = r'3600'        # In Seconds, Right now set to fetch all the jobs posted in the last 1 hour
 
 #### URLs
-job_listing_url = rf"https://www.linkedin.com/jobs/api/seeMoreJobPostings/search?keywords={designation}&location=United%2BKingdom&geoId=101165590&f_TPR=r7200&start=1"
+job_listing_url = rf"https://www.linkedin.com/jobs/api/seeMoreJobPostings/search?keywords={designation}&location=United%2BKingdom&geoId=101165590&f_TPR=r{dur_seconds}&start=1"
 job_posting_url = r"https://www.linkedin.com/jobs/api/jobPosting/"
 
 ####### Methods
